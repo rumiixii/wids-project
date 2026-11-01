@@ -1,0 +1,397 @@
+{
+  "deauth": {
+    "rows": 1626469,
+    "attack_frames": 38942,
+    "attack_start_s": 423.847834,
+    "baseline": {
+      "deauth_per_s_max": 3,
+      "deauth_per_s_p99": 1.2299999999999898,
+      "frames": 6581
+    },
+    "duplicate_rows_pct": 71.32333908608157,
+    "frame_threshold": 0.9999990834317479,
+    "frame_test": {
+      "TP": 11913,
+      "FP": 0,
+      "TN": 420953,
+      "FN": 122,
+      "TPR": 0.9898628998753636,
+      "FPR": 0.0,
+      "precision": 1.0,
+      "F1": 0.9949056288625355,
+      "accuracy": 0.9997182369950206,
+      "PR_AUC": 1.0
+    },
+    "window_k": 1,
+    "window_test": {
+      "TP": 57,
+      "FP": 0,
+      "TN": 118,
+      "FN": 1,
+      "TPR": 0.9827586206896551,
+      "FPR": 0.0,
+      "precision": 1.0,
+      "F1": 0.9913043478260869,
+      "accuracy": 0.9943181818181818,
+      "n_windows": 176
+    },
+    "ablation_no_length": {
+      "TP": 11908,
+      "FP": 0,
+      "TN": 420953,
+      "FN": 127,
+      "TPR": 0.9894474449522227,
+      "FPR": 0.0,
+      "precision": 1.0,
+      "F1": 0.9946957357056342,
+      "accuracy": 0.9997066893308821,
+      "PR_AUC": 1.0
+    },
+    "ablation_frame_only": {
+      "TP": 11897,
+      "FP": 0,
+      "TN": 420953,
+      "FN": 138,
+      "TPR": 0.9885334441213128,
+      "FPR": 0.0,
+      "precision": 1.0,
+      "F1": 0.9942336620424536,
+      "accuracy": 0.9996812844697774,
+      "PR_AUC": 1.0
+    },
+    "naive_random_split": {
+      "TP": 7788,
+      "FP": 0,
+      "TN": 317506,
+      "FN": 0,
+      "TPR": 1.0,
+      "FPR": 0.0,
+      "precision": 1.0,
+      "F1": 1.0,
+      "accuracy": 1.0
+    },
+    "naive_test_rows_also_in_train_pct": 78.2123248507504,
+    "time_only_random_split": {
+      "TP": 7250,
+      "FP": 71289,
+      "TN": 246217,
+      "FN": 538,
+      "TPR": 0.9309193631227529,
+      "FPR": 0.22452804041498428,
+      "precision": 0.09231082646837876,
+      "F1": 0.16796598978303426,
+      "accuracy": 0.7791935910284236
+    },
+    "rules_window_test": {
+      "any_deauth_in_window": {
+        "TP": 58,
+        "FP": 0,
+        "TN": 118,
+        "FN": 0,
+        "TPR": 1.0,
+        "FPR": 0.0,
+        "precision": 1.0,
+        "F1": 1.0,
+        "accuracy": 1.0
+      },
+      "deauth_rate_above_baseline_max": {
+        "TP": 58,
+        "FP": 0,
+        "TN": 118,
+        "FN": 0,
+        "TPR": 1.0,
+        "FPR": 0.0,
+        "precision": 1.0,
+        "F1": 1.0,
+        "accuracy": 1.0
+      },
+      "beacon_profile_not_in_baseline": {
+        "TP": 25,
+        "FP": 20,
+        "TN": 98,
+        "FN": 33,
+        "TPR": 0.43103448275862066,
+        "FPR": 0.1694915254237288,
+        "precision": 0.5555555555555556,
+        "F1": 0.4854368932038835,
+        "accuracy": 0.6988636363636364
+      }
+    }
+  },
+  "rogue_ap": {
+    "rows": 1973150,
+    "attack_frames": 1310,
+    "attack_start_s": 414.096307,
+    "baseline": {
+      "deauth_per_s_max": 2,
+      "deauth_per_s_p99": 0.8199999999999932,
+      "frames": 7465
+    },
+    "duplicate_rows_pct": 70.41715024199884,
+    "frame_threshold": 0.9999994650879197,
+    "frame_test": {
+      "TP": 354,
+      "FP": 0,
+      "TN": 594073,
+      "FN": 0,
+      "TPR": 1.0,
+      "FPR": 0.0,
+      "precision": 1.0,
+      "F1": 1.0,
+      "accuracy": 1.0,
+      "PR_AUC": 1.0
+    },
+    "window_k": 1,
+    "window_test": {
+      "TP": 52,
+      "FP": 0,
+      "TN": 125,
+      "FN": 0,
+      "TPR": 1.0,
+      "FPR": 0.0,
+      "precision": 1.0,
+      "F1": 1.0,
+      "accuracy": 1.0,
+      "n_windows": 177
+    },
+    "ablation_no_length": {
+      "TP": 151,
+      "FP": 0,
+      "TN": 594073,
+      "FN": 203,
+      "TPR": 0.4265536723163842,
+      "FPR": 0.0,
+      "precision": 1.0,
+      "F1": 0.5980198019801981,
+      "accuracy": 0.9996584946511514,
+      "PR_AUC": 1.0
+    },
+    "ablation_frame_only": {
+      "TP": 304,
+      "FP": 0,
+      "TN": 594073,
+      "FN": 50,
+      "TPR": 0.8587570621468926,
+      "FPR": 0.0,
+      "precision": 1.0,
+      "F1": 0.9240121580547112,
+      "accuracy": 0.999915885382057,
+      "PR_AUC": 1.0
+    },
+    "naive_random_split": {
+      "TP": 262,
+      "FP": 0,
+      "TN": 394368,
+      "FN": 0,
+      "TPR": 1.0,
+      "FPR": 0.0,
+      "precision": 1.0,
+      "F1": 1.0,
+      "accuracy": 1.0
+    },
+    "naive_test_rows_also_in_train_pct": 77.04888123051973,
+    "time_only_random_split": {
+      "TP": 251,
+      "FP": 140861,
+      "TN": 253507,
+      "FN": 11,
+      "TPR": 0.9580152671755725,
+      "FPR": 0.35718161716975005,
+      "precision": 0.0017787289528884858,
+      "F1": 0.003550865081273785,
+      "accuracy": 0.6430276461495578
+    },
+    "rules_window_test": {
+      "any_deauth_in_window": {
+        "TP": 52,
+        "FP": 9,
+        "TN": 116,
+        "FN": 0,
+        "TPR": 1.0,
+        "FPR": 0.072,
+        "precision": 0.8524590163934426,
+        "F1": 0.9203539823008848,
+        "accuracy": 0.9491525423728814
+      },
+      "deauth_rate_above_baseline_max": {
+        "TP": 52,
+        "FP": 9,
+        "TN": 116,
+        "FN": 0,
+        "TPR": 1.0,
+        "FPR": 0.072,
+        "precision": 0.8524590163934426,
+        "F1": 0.9203539823008848,
+        "accuracy": 0.9491525423728814
+      },
+      "beacon_profile_not_in_baseline": {
+        "TP": 52,
+        "FP": 19,
+        "TN": 106,
+        "FN": 0,
+        "TPR": 1.0,
+        "FPR": 0.152,
+        "precision": 0.7323943661971831,
+        "F1": 0.8455284552845529,
+        "accuracy": 0.8926553672316384
+      }
+    }
+  },
+  "website_spoofing": {
+    "rows": 2668567,
+    "attack_frames": 405121,
+    "attack_start_s": 198.147503,
+    "baseline": {
+      "deauth_per_s_max": 0,
+      "deauth_per_s_p99": 0.0,
+      "frames": 5280
+    },
+    "duplicate_rows_pct": 83.8321466165174,
+    "frame_threshold": 0.6176281429691898,
+    "frame_test": {
+      "TP": 127371,
+      "FP": 4974,
+      "TN": 630448,
+      "FN": 4937,
+      "TPR": 0.9626855518940653,
+      "FPR": 0.007827868723462517,
+      "precision": 0.9624164116513657,
+      "F1": 0.9625509629590444,
+      "accuracy": 0.987090513592018,
+      "PR_AUC": 0.9931166954536519
+    },
+    "window_k": 190,
+    "window_test": {
+      "TP": 71,
+      "FP": 3,
+      "TN": 98,
+      "FN": 23,
+      "TPR": 0.7553191489361702,
+      "FPR": 0.0297029702970297,
+      "precision": 0.9594594594594594,
+      "F1": 0.8452380952380952,
+      "accuracy": 0.8666666666666667,
+      "n_windows": 195
+    },
+    "ablation_no_length": {
+      "TP": 126898,
+      "FP": 6402,
+      "TN": 629020,
+      "FN": 5410,
+      "TPR": 0.9591105602079996,
+      "FPR": 0.010075194122960804,
+      "precision": 0.9519729932483121,
+      "F1": 0.9555284479383153,
+      "accuracy": 0.9846143826605708,
+      "PR_AUC": 0.9889968167768759
+    },
+    "ablation_frame_only": {
+      "TP": 122921,
+      "FP": 6882,
+      "TN": 628540,
+      "FN": 9387,
+      "TPR": 0.9290519091816065,
+      "FPR": 0.01083059761859048,
+      "precision": 0.9469811945794782,
+      "F1": 0.9379308766133432,
+      "accuracy": 0.97880895627369,
+      "PR_AUC": 0.9833828852143679
+    },
+    "naive_random_split": {
+      "TP": 80243,
+      "FP": 11184,
+      "TN": 441506,
+      "FN": 781,
+      "TPR": 0.9903608807266983,
+      "FPR": 0.02470564845700148,
+      "precision": 0.8776728975029259,
+      "F1": 0.930617972641504,
+      "accuracy": 0.9775816261143608
+    },
+    "naive_test_rows_also_in_train_pct": 88.11011140798254,
+    "time_only_random_split": {
+      "TP": 80163,
+      "FP": 222155,
+      "TN": 230535,
+      "FN": 861,
+      "TPR": 0.9893735189573459,
+      "FPR": 0.4907442178974574,
+      "precision": 0.2651611878882501,
+      "F1": 0.4182322834440264,
+      "accuracy": 0.5821432452586967
+    },
+    "rules_window_test": {
+      "any_deauth_in_window": {
+        "TP": 0,
+        "FP": 0,
+        "TN": 101,
+        "FN": 94,
+        "TPR": 0.0,
+        "FPR": 0.0,
+        "precision": NaN,
+        "F1": 0.0,
+        "accuracy": 0.517948717948718
+      },
+      "deauth_rate_above_baseline_max": {
+        "TP": 0,
+        "FP": 0,
+        "TN": 101,
+        "FN": 94,
+        "TPR": 0.0,
+        "FPR": 0.0,
+        "precision": NaN,
+        "F1": 0.0,
+        "accuracy": 0.517948717948718
+      },
+      "beacon_profile_not_in_baseline": {
+        "TP": 0,
+        "FP": 0,
+        "TN": 101,
+        "FN": 94,
+        "TPR": 0.0,
+        "FPR": 0.0,
+        "precision": NaN,
+        "F1": 0.0,
+        "accuracy": 0.517948717948718
+      }
+    }
+  },
+  "cross_capture": {
+    "rogue_ap_on_deauth": {
+      "clean_windows": 100,
+      "false_alerts_clean": 0,
+      "alerts_after_430s": 0,
+      "windows_after_430s": 173
+    },
+    "website_spoofing_on_deauth": {
+      "clean_windows": 100,
+      "false_alerts_clean": 0,
+      "alerts_after_430s": 5,
+      "windows_after_430s": 173
+    },
+    "deauth_on_rogue_ap": {
+      "clean_windows": 100,
+      "false_alerts_clean": 0,
+      "alerts_after_430s": 160,
+      "windows_after_430s": 174
+    },
+    "website_spoofing_on_rogue_ap": {
+      "clean_windows": 100,
+      "false_alerts_clean": 3,
+      "alerts_after_430s": 15,
+      "windows_after_430s": 174
+    },
+    "deauth_on_website_spoofing": {
+      "clean_windows": 100,
+      "false_alerts_clean": 0,
+      "alerts_after_430s": 0,
+      "windows_after_430s": 192
+    },
+    "rogue_ap_on_website_spoofing": {
+      "clean_windows": 100,
+      "false_alerts_clean": 0,
+      "alerts_after_430s": 0,
+      "windows_after_430s": 192
+    }
+  }
+}

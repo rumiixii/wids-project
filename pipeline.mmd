@@ -1,0 +1,10 @@
+flowchart LR
+  A["Supplied CSVs<br/>(6 files, 6.3 M frames)"] --> B["Re-join train+test<br/>restore capture order<br/>drop time/sequence columns"]
+  B --> C["BASELINE<br/>first 90 s, attack-free<br/>deauth/s max, signal &amp; length profiles"]
+  B --> D["OBSERVE<br/>per-frame header + radio fields"]
+  C --> E["EXTRACT FEATURES<br/>frame fields + 1-s rate/context<br/>+ rarity vs baseline"]
+  D --> E
+  E --> F["Classifier per attack<br/>gradient-boosted trees<br/>frame score 0..1"]
+  F --> G["ALERT<br/>1-s window alerts if<br/>≥ k frames flagged"]
+  G --> H["VALIDATE<br/>held-out 30-s time blocks<br/>TP FP TN FN, TPR FPR precision"]
+  G --> I["Response (human)<br/>PMF, 802.1X EAP-TLS,<br/>locate &amp; remove device"]

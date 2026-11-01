@@ -1,0 +1,5 @@
+data/
+__pycache__/
+*.pyc
+alerts.log
+results/*_scores.parquet

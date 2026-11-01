@@ -1,0 +1,119 @@
+{
+  "rows": 1626469,
+  "attack_frames": 38942,
+  "attack_start_s": 423.847834,
+  "baseline": {
+    "deauth_per_s_max": 3,
+    "deauth_per_s_p99": 1.2299999999999898,
+    "frames": 6581
+  },
+  "duplicate_rows_pct": 71.32333908608157,
+  "frame_threshold": 0.9999990834317479,
+  "frame_test": {
+    "TP": 11913,
+    "FP": 0,
+    "TN": 420953,
+    "FN": 122,
+    "TPR": 0.9898628998753636,
+    "FPR": 0.0,
+    "precision": 1.0,
+    "F1": 0.9949056288625355,
+    "accuracy": 0.9997182369950206,
+    "PR_AUC": 1.0
+  },
+  "window_k": 1,
+  "window_test": {
+    "TP": 57,
+    "FP": 0,
+    "TN": 118,
+    "FN": 1,
+    "TPR": 0.9827586206896551,
+    "FPR": 0.0,
+    "precision": 1.0,
+    "F1": 0.9913043478260869,
+    "accuracy": 0.9943181818181818,
+    "n_windows": 176
+  },
+  "ablation_no_length": {
+    "TP": 11908,
+    "FP": 0,
+    "TN": 420953,
+    "FN": 127,
+    "TPR": 0.9894474449522227,
+    "FPR": 0.0,
+    "precision": 1.0,
+    "F1": 0.9946957357056342,
+    "accuracy": 0.9997066893308821,
+    "PR_AUC": 1.0
+  },
+  "ablation_frame_only": {
+    "TP": 11897,
+    "FP": 0,
+    "TN": 420953,
+    "FN": 138,
+    "TPR": 0.9885334441213128,
+    "FPR": 0.0,
+    "precision": 1.0,
+    "F1": 0.9942336620424536,
+    "accuracy": 0.9996812844697774,
+    "PR_AUC": 1.0
+  },
+  "naive_random_split": {
+    "TP": 7788,
+    "FP": 0,
+    "TN": 317506,
+    "FN": 0,
+    "TPR": 1.0,
+    "FPR": 0.0,
+    "precision": 1.0,
+    "F1": 1.0,
+    "accuracy": 1.0
+  },
+  "naive_test_rows_also_in_train_pct": 78.2123248507504,
+  "time_only_random_split": {
+    "TP": 7250,
+    "FP": 71289,
+    "TN": 246217,
+    "FN": 538,
+    "TPR": 0.9309193631227529,
+    "FPR": 0.22452804041498428,
+    "precision": 0.09231082646837876,
+    "F1": 0.16796598978303426,
+    "accuracy": 0.7791935910284236
+  },
+  "rules_window_test": {
+    "any_deauth_in_window": {
+      "TP": 58,
+      "FP": 0,
+      "TN": 118,
+      "FN": 0,
+      "TPR": 1.0,
+      "FPR": 0.0,
+      "precision": 1.0,
+      "F1": 1.0,
+      "accuracy": 1.0
+    },
+    "deauth_rate_above_baseline_max": {
+      "TP": 58,
+      "FP": 0,
+      "TN": 118,
+      "FN": 0,
+      "TPR": 1.0,
+      "FPR": 0.0,
+      "precision": 1.0,
+      "F1": 1.0,
+      "accuracy": 1.0
+    },
+    "beacon_profile_not_in_baseline": {
+      "TP": 25,
+      "FP": 20,
+      "TN": 98,
+      "FN": 33,
+      "TPR": 0.43103448275862066,
+      "FPR": 0.1694915254237288,
+      "precision": 0.5555555555555556,
+      "F1": 0.4854368932038835,
+      "accuracy": 0.6988636363636364
+    }
+  }
+}
